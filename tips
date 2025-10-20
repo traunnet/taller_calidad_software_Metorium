@@ -1,0 +1,84 @@
+⚙️ Comandos útiles de Laravel 
+🖼️ 📂 Imágenes y almacenamiento
+
+Crea un enlace simbólico entre public/storage y storage/app/public, necesario para acceder a los archivos subidos desde el navegador.
+
+php artisan storage:link
+
+🌐 🚀 Servidor local
+
+Inicia el servidor de desarrollo incorporado de Laravel (por defecto en http://127.0.0.1:8000).
+
+php artisan serve
+
+🧱 📜 Migraciones de base de datos
+
+Ejecuta todas las migraciones pendientes para crear o actualizar las tablas en tu base de datos.
+
+php artisan migrate
+
+
+🛠️ Otros comandos útiles de migraciones:
+
+php artisan migrate:rollback   # Revierte la última migración
+php artisan migrate:fresh      # Elimina y vuelve a ejecutar todas las migraciones
+php artisan migrate:refresh    # Refresca las migraciones conservando la estructura
+
+🧹 🧰 Limpieza y optimización del sistema
+1️⃣ Limpiar caché de la aplicación
+
+Elimina todos los datos almacenados en caché por Laravel.
+
+php artisan cache:clear
+
+2️⃣ Limpiar caché de configuración
+
+Borra el caché generado por config:cache, útil si cambias archivos en /config.
+
+php artisan config:clear
+
+3️⃣ Limpiar caché de rutas
+
+Elimina el caché de rutas generado por route:cache.
+
+php artisan route:clear
+
+4️⃣ Limpiar vistas compiladas
+
+Borra las vistas .blade.php compiladas que están en storage/framework/views.
+
+php artisan view:clear
+
+5️⃣ Limpiar caché de eventos
+
+Elimina los eventos cacheados.
+
+php artisan event:clear
+
+⚡ 🧨 Limpieza total (todo en uno)
+
+Ejecuta todos los comandos de limpieza anteriores en una sola instrucción:
+
+php artisan optimize:clear
+
+
+🔸 Ideal cuando realizas cambios importantes en configuración, rutas o vistas.
+
+💡 Extras útiles
+🔍 Ver la lista completa de comandos disponibles:
+php artisan list
+
+🏗️ Crear un controlador:
+php artisan make:controller NombreController
+
+📦 Crear un modelo con migración:
+php artisan make:model Nombre -m
+
+✨ Recomendación final
+
+Después de limpiar, puedes regenerar las cachés para mejorar el rendimiento:
+
+php artisan config:cache
+php artisan route:cache
+php artisan view:cache
+php artisan event:cache
