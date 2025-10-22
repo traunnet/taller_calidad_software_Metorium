@@ -3,6 +3,7 @@
 
 Crea un enlace simbólico entre public/storage y storage/app/public, necesario para acceder a los archivos subidos desde el navegador.
 
+Eliminar carpeta storage existente antes de crear el enlace si es necesario.
 php artisan storage:link
 
 🌐 🚀 Servidor local
