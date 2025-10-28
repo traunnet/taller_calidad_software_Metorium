@@ -29,11 +29,15 @@
 </head>
 <body class="login-page">
   <div class="bg-video" aria-hidden="true">
-    <video id="bgVideo" autoplay muted playsinline loop>
-      <source src="{{ asset('assets/video/bg.mp4') }}" type="video/mp4">
-    </video>
-    <div class="bg-overlay"></div>
-  </div>
+<div class="bg-video" aria-hidden="true">
+  <video id="bgVideo" autoplay muted playsinline loop aria-label="Video de fondo mostrando escenas abstractas de Motórium">
+    <source src="{{ asset('assets/video/bg.mp4') }}" type="video/mp4">
+    <track kind="subtitles" src="{{ asset('assets/video/bg-subtitles.vtt') }}" srclang="es" label="Español" default>
+    <track kind="descriptions" src="{{ asset('assets/video/bg-descriptions.vtt') }}" srclang="es" label="Descripción de audio">
+    Tu navegador no soporta la reproducción de videos.
+  </video>
+  <div class="bg-overlay"></div>
+</div>
 
   <div class="container min-vh-100 d-flex align-items-center justify-content-center">
     <div class="card login-card p-4 shadow-lg" data-aos="zoom-in">
