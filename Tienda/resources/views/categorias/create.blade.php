@@ -9,16 +9,16 @@
     <form action="{{ route('categorias.store') }}" method="POST">
         @csrf
         <div class="mb-3">
-            <label>Nombre</label>
-            <input type="text" name="nombre" class="form-control" required>
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" class="form-control" required>
         </div>
         <div class="mb-3">
-            <label>Slug</label>
-            <input type="text" name="slug" class="form-control" required>
+            <label for="slug">Slug</label>
+            <input type="text" id="slug" name="slug" class="form-control" required>
         </div>
         <div class="mb-3">
-            <label>Descripción</label>
-            <textarea name="descripcion" class="form-control"></textarea>
+            <label for="descripcion">Descripción</label>
+            <textarea id="descripcion" name="descripcion" class="form-control"></textarea>
         </div>
         <button type="submit" class="btn btn-success">Guardar</button>
         <a href="{{ route('categorias.index') }}" class="btn btn-secondary">Cancelar</a>
