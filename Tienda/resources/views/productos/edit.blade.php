@@ -17,7 +17,7 @@
                 <label class="label-text">Categoría</label>
                 <select name="id_categoria" class="form-select" required>
                     @foreach($categorias as $categoria)
-                        <option value="{{ $categoria->id_categoria }}" 
+                        <option value="{{ $categoria->id_categoria }}"
                             {{ $producto->id_categoria == $categoria->id_categoria ? 'selected' : '' }}>
                             {{ $categoria->nombre }}
                         </option>
@@ -82,7 +82,7 @@
                 <label class="label-text">Imagen del producto</label>
                 @if($producto->imagen)
                     <div class="mb-2">
-                        <img src="{{ asset('storage/'.$producto->imagen) }}" 
+                        <img src="{{ asset('storage/'.$producto->imagen) }}"
                              alt="Imagen actual" class="img-thumbnail" style="max-width: 150px;">
                     </div>
                 @endif
