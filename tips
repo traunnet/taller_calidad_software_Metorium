@@ -83,3 +83,31 @@ php artisan config:cache
 php artisan route:cache
 php artisan view:cache
 php artisan event:cache
+
+1. Instalar Dependencias de PHP
+Descarga todas las librerías de PHP necesarias definidas en composer.json.
+
+composer install
+2. Configurar el Archivo de Entorno
+Copia el archivo de ejemplo para crear tu configuración local:
+
+cp .env.example .env
+⚠️ IMPORTANTE: Abre el nuevo archivo .env y configura las credenciales de tu base de datos localmente.
+
+# Ejemplo en el archivo .env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=nombre_de_tu_db_local
+DB_USERNAME=root
+DB_PASSWORD=
+
+3. Generar la Clave de Aplicación (App Key)
+Esta clave es vital para la seguridad (encriptación de sesiones, cookies, etc.). Se genera automáticamente y se inserta en el archivo .env.
+
+php artisan key:generate
+
+4. Ejecutar las Migraciones de Base de Datos
+Crea la estructura de tablas necesaria en la base de datos configurada en el paso 2.
+
+php artisan migrate
